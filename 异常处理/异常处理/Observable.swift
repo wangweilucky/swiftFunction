@@ -19,6 +19,10 @@ class Observable<T>: NSObject {
     
     let queue = DispatchQueue(label: "com.swift.signal.token")
     
+    deinit {
+        print("干掉了")
+    }
+    
     init(pure value: T?) {
         self.value = value
     }
@@ -27,24 +31,6 @@ class Observable<T>: NSObject {
         let token = observableToken()
         subscribers.updateValue(subscriber, forKey: token)
         return token
-    }
-    
-    // 绑定两个Signal的值
-    func bind(signal: Observable) -> ObservableToken {
-        return self.subscribe { x in
-            signal.update(x)
-        }
-    }
-    
-    // bind函数
-    func flatMap<B>(f: @escaping (T)-> Observable<B>) -> Observable<B> {
-        let signal: Observable<B> = Observable<B>(pure: nil)
-        _ = self.subscribe(subscriber: { (x) in
-            let newS = f(x)
-            signal.update(newS.peek())
-            _ = newS.bind(signal: signal)
-        })
-        return signal
     }
     
     func update(_ value: T) {
@@ -61,6 +47,26 @@ class Observable<T>: NSObject {
     }
     
 }
+
+extension Observable {
+
+    func bind(signal: Observable) -> ObservableToken {
+        return self.subscribe { x in
+            signal.update(x)
+        }
+    }
+
+    func flatMap<B>(f: @escaping (T)-> Observable<B>) -> Observable<B> {
+        let signal: Observable<B> = Observable<B>(pure: nil)
+        _ = self.subscribe(subscriber: { (x) in
+            let newS = f(x)
+            signal.update(newS.peek())
+            _ = newS.bind(signal: signal)
+        })
+        return signal
+    }
+}
+
 
 extension Observable {
    

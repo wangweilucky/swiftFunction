@@ -15,7 +15,7 @@
 		4A394BD72462848600ABCEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A394BD52462848600ABCEE2 /* LaunchScreen.storyboard */; };
 		4A394BE22462848700ABCEE2 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BE12462848700ABCEE2 /* ____Tests.swift */; };
 		4A394BED2462848700ABCEE2 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BEC2462848700ABCEE2 /* ____UITests.swift */; };
-		4A394C422462A96800ABCEE2 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394C412462A96800ABCEE2 /* Signal.swift */; };
+		4A394C422462A96800ABCEE2 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394C412462A96800ABCEE2 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		4A394BE82462848700ABCEE2 /* 异常处理UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "异常处理UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A394BEC2462848700ABCEE2 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		4A394BEE2462848700ABCEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A394C412462A96800ABCEE2 /* Signal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		4A394C412462A96800ABCEE2 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				4A394BD32462848600ABCEE2 /* Assets.xcassets */,
 				4A394BD52462848600ABCEE2 /* LaunchScreen.storyboard */,
 				4A394BD82462848600ABCEE2 /* Info.plist */,
-				4A394C412462A96800ABCEE2 /* Signal.swift */,
+				4A394C412462A96800ABCEE2 /* Observable.swift */,
 			);
 			path = "异常处理";
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A394BCF2462848500ABCEE2 /* ViewController.swift in Sources */,
-				4A394C422462A96800ABCEE2 /* Signal.swift in Sources */,
+				4A394C422462A96800ABCEE2 /* Observable.swift in Sources */,
 				4A394BCB2462848500ABCEE2 /* AppDelegate.swift in Sources */,
 				4A394BCD2462848500ABCEE2 /* SceneDelegate.swift in Sources */,
 			);
