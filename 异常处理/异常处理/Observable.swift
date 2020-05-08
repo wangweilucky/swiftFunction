@@ -34,13 +34,10 @@ class Observable<T>: NSObject {
     }
     
     func update(_ value: T) {
+        self.value = value
         _ = subscribers.compactMap { $1(value) }
     }
-    
-    func peek() -> T {
-        return self.value!
-    }
-    
+
     func observableToken() -> Int {
         tokenCounter = tokenCounter + 1
         return tokenCounter
@@ -50,21 +47,22 @@ class Observable<T>: NSObject {
 
 extension Observable {
 
-    func bind(signal: Observable) -> ObservableToken {
+    func bind(_ signal: Observable) -> ObservableToken {
         return self.subscribe { x in
             signal.update(x)
         }
     }
 
-    func flatMap<B>(f: @escaping (T)-> Observable<B>) -> Observable<B> {
-        let signal: Observable<B> = Observable<B>(pure: nil)
+    func flatNext<B>(f: @escaping (T)-> Observable<B>) -> Observable<B> {
+        let observable: Observable<B> = Observable<B>(pure: nil)
         _ = self.subscribe(subscriber: { (x) in
-            let newS = f(x)
-            signal.update(newS.peek())
-            _ = newS.bind(signal: signal)
+            let newObservable = f(x)
+            observable.update(newObservable.value!)
+            _ = newObservable.bind(observable)
         })
-        return signal
+        return observable
     }
+    
 }
 
 

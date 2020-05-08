@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1F822C2464321D001EB013 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F822B2464321D001EB013 /* ViewController4.swift */; };
+		4A1F822E2465007E001EB013 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F822D2465007E001EB013 /* ViewController5.swift */; };
 		4A394BCB2462848500ABCEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BCA2462848500ABCEE2 /* AppDelegate.swift */; };
 		4A394BCD2462848500ABCEE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BCC2462848500ABCEE2 /* SceneDelegate.swift */; };
 		4A394BCF2462848500ABCEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BCE2462848500ABCEE2 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 		4A394BE22462848700ABCEE2 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BE12462848700ABCEE2 /* ____Tests.swift */; };
 		4A394BED2462848700ABCEE2 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394BEC2462848700ABCEE2 /* ____UITests.swift */; };
 		4A394C422462A96800ABCEE2 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394C412462A96800ABCEE2 /* Observable.swift */; };
+		4A394C7B2463F19100ABCEE2 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394C7A2463F19100ABCEE2 /* ViewController2.swift */; };
+		4A394C7D2463F19E00ABCEE2 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A394C7C2463F19E00ABCEE2 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A394BC72462848500ABCEE2 /* 异常处理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "异常处理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1F822B2464321D001EB013 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		4A1F822D2465007E001EB013 /* ViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		4A394BC72462848500ABCEE2 /* swift Fuction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift Fuction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A394BCA2462848500ABCEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A394BCC2462848500ABCEE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A394BCE2462848500ABCEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,13 +50,15 @@
 		4A394BD32462848600ABCEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A394BD62462848600ABCEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A394BD82462848600ABCEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A394BDD2462848700ABCEE2 /* 异常处理Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "异常处理Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A394BDD2462848700ABCEE2 /* swift FuctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift FuctionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A394BE12462848700ABCEE2 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
 		4A394BE32462848700ABCEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A394BE82462848700ABCEE2 /* 异常处理UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "异常处理UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A394BE82462848700ABCEE2 /* swift FuctionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift FuctionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A394BEC2462848700ABCEE2 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		4A394BEE2462848700ABCEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A394C412462A96800ABCEE2 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		4A394C7A2463F19100ABCEE2 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		4A394C7C2463F19E00ABCEE2 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +99,9 @@
 		4A394BC82462848500ABCEE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A394BC72462848500ABCEE2 /* 异常处理.app */,
-				4A394BDD2462848700ABCEE2 /* 异常处理Tests.xctest */,
-				4A394BE82462848700ABCEE2 /* 异常处理UITests.xctest */,
+				4A394BC72462848500ABCEE2 /* swift Fuction.app */,
+				4A394BDD2462848700ABCEE2 /* swift FuctionTests.xctest */,
+				4A394BE82462848700ABCEE2 /* swift FuctionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +112,10 @@
 				4A394BCA2462848500ABCEE2 /* AppDelegate.swift */,
 				4A394BCC2462848500ABCEE2 /* SceneDelegate.swift */,
 				4A394BCE2462848500ABCEE2 /* ViewController.swift */,
+				4A394C7A2463F19100ABCEE2 /* ViewController2.swift */,
+				4A394C7C2463F19E00ABCEE2 /* ViewController3.swift */,
+				4A1F822B2464321D001EB013 /* ViewController4.swift */,
+				4A1F822D2465007E001EB013 /* ViewController5.swift */,
 				4A394BD02462848500ABCEE2 /* Main.storyboard */,
 				4A394BD32462848600ABCEE2 /* Assets.xcassets */,
 				4A394BD52462848600ABCEE2 /* LaunchScreen.storyboard */,
@@ -134,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A394BC62462848500ABCEE2 /* 异常处理 */ = {
+		4A394BC62462848500ABCEE2 /* swift Fuction */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A394BF12462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理" */;
+			buildConfigurationList = 4A394BF12462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift Fuction" */;
 			buildPhases = (
 				4A394BC32462848500ABCEE2 /* Sources */,
 				4A394BC42462848500ABCEE2 /* Frameworks */,
@@ -146,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "异常处理";
+			name = "swift Fuction";
 			productName = "异常处理";
-			productReference = 4A394BC72462848500ABCEE2 /* 异常处理.app */;
+			productReference = 4A394BC72462848500ABCEE2 /* swift Fuction.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4A394BDC2462848700ABCEE2 /* 异常处理Tests */ = {
+		4A394BDC2462848700ABCEE2 /* swift FuctionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A394BF42462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理Tests" */;
+			buildConfigurationList = 4A394BF42462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift FuctionTests" */;
 			buildPhases = (
 				4A394BD92462848700ABCEE2 /* Sources */,
 				4A394BDA2462848700ABCEE2 /* Frameworks */,
@@ -164,14 +176,14 @@
 			dependencies = (
 				4A394BDF2462848700ABCEE2 /* PBXTargetDependency */,
 			);
-			name = "异常处理Tests";
+			name = "swift FuctionTests";
 			productName = "异常处理Tests";
-			productReference = 4A394BDD2462848700ABCEE2 /* 异常处理Tests.xctest */;
+			productReference = 4A394BDD2462848700ABCEE2 /* swift FuctionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4A394BE72462848700ABCEE2 /* 异常处理UITests */ = {
+		4A394BE72462848700ABCEE2 /* swift FuctionUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A394BF72462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理UITests" */;
+			buildConfigurationList = 4A394BF72462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift FuctionUITests" */;
 			buildPhases = (
 				4A394BE42462848700ABCEE2 /* Sources */,
 				4A394BE52462848700ABCEE2 /* Frameworks */,
@@ -182,9 +194,9 @@
 			dependencies = (
 				4A394BEA2462848700ABCEE2 /* PBXTargetDependency */,
 			);
-			name = "异常处理UITests";
+			name = "swift FuctionUITests";
 			productName = "异常处理UITests";
-			productReference = 4A394BE82462848700ABCEE2 /* 异常处理UITests.xctest */;
+			productReference = 4A394BE82462848700ABCEE2 /* swift FuctionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -199,6 +211,7 @@
 				TargetAttributes = {
 					4A394BC62462848500ABCEE2 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					4A394BDC2462848700ABCEE2 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -210,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A394BC22462848500ABCEE2 /* Build configuration list for PBXProject "异常处理" */;
+			buildConfigurationList = 4A394BC22462848500ABCEE2 /* Build configuration list for PBXProject "swift Fuction" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,9 +236,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A394BC62462848500ABCEE2 /* 异常处理 */,
-				4A394BDC2462848700ABCEE2 /* 异常处理Tests */,
-				4A394BE72462848700ABCEE2 /* 异常处理UITests */,
+				4A394BC62462848500ABCEE2 /* swift Fuction */,
+				4A394BDC2462848700ABCEE2 /* swift FuctionTests */,
+				4A394BE72462848700ABCEE2 /* swift FuctionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A394C7B2463F19100ABCEE2 /* ViewController2.swift in Sources */,
+				4A1F822C2464321D001EB013 /* ViewController4.swift in Sources */,
 				4A394BCF2462848500ABCEE2 /* ViewController.swift in Sources */,
+				4A394C7D2463F19E00ABCEE2 /* ViewController3.swift in Sources */,
+				4A1F822E2465007E001EB013 /* ViewController5.swift in Sources */,
 				4A394C422462A96800ABCEE2 /* Observable.swift in Sources */,
 				4A394BCB2462848500ABCEE2 /* AppDelegate.swift in Sources */,
 				4A394BCD2462848500ABCEE2 /* SceneDelegate.swift in Sources */,
@@ -290,12 +307,12 @@
 /* Begin PBXTargetDependency section */
 		4A394BDF2462848700ABCEE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A394BC62462848500ABCEE2 /* 异常处理 */;
+			target = 4A394BC62462848500ABCEE2 /* swift Fuction */;
 			targetProxy = 4A394BDE2462848700ABCEE2 /* PBXContainerItemProxy */;
 		};
 		4A394BEA2462848700ABCEE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A394BC62462848500ABCEE2 /* 异常处理 */;
+			target = 4A394BC62462848500ABCEE2 /* swift Fuction */;
 			targetProxy = 4A394BE92462848700ABCEE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLG2UNSU66;
 				INFOPLIST_FILE = "异常处理/Info.plist";
@@ -447,6 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wwango.ctrip.com.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -456,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLG2UNSU66;
 				INFOPLIST_FILE = "异常处理/Info.plist";
@@ -488,7 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/异常处理.app/异常处理";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift Fuction.app/swift Fuction";
 			};
 			name = Debug;
 		};
@@ -510,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/异常处理.app/异常处理";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift Fuction.app/swift Fuction";
 			};
 			name = Release;
 		};
@@ -557,7 +577,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A394BC22462848500ABCEE2 /* Build configuration list for PBXProject "异常处理" */ = {
+		4A394BC22462848500ABCEE2 /* Build configuration list for PBXProject "swift Fuction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A394BEF2462848700ABCEE2 /* Debug */,
@@ -566,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A394BF12462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理" */ = {
+		4A394BF12462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift Fuction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A394BF22462848700ABCEE2 /* Debug */,
@@ -575,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A394BF42462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理Tests" */ = {
+		4A394BF42462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift FuctionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A394BF52462848700ABCEE2 /* Debug */,
@@ -584,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A394BF72462848700ABCEE2 /* Build configuration list for PBXNativeTarget "异常处理UITests" */ = {
+		4A394BF72462848700ABCEE2 /* Build configuration list for PBXNativeTarget "swift FuctionUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A394BF82462848700ABCEE2 /* Debug */,

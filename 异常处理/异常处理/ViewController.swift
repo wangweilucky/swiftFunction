@@ -84,22 +84,6 @@ class ViewController: UIViewController {
                 StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
         }
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let xObservable = Observable(pure: 0)
-        let yObservable = Observable(pure: 1)
-        _ = xObservable.bind(signal: yObservable)
-        
-        _ = xObservable.subscribe { (x) in
-            print("got \(x) in xObserable")
-        }
-        _ = yObservable.subscribe { (x) in
-            print("got \(x) in yObserbale")
-        }
-        
-        xObservable.update(3)
-    }
 }
 
 
