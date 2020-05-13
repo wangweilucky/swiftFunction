@@ -10,7 +10,7 @@
 
 @implementation StatUtility
 
-+ (void)uploadStatisInfo:(NSDictionary *)dic
++ (void)uploadInfo:(NSDictionary *)dic
 {
     NSLog(@"update log");
 }

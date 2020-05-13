@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StatUtility : NSObject
 
-+ (void)uploadStatisInfo:(NSDictionary *)dic;
++ (void)uploadInfo:(NSDictionary *)dic;
 
 @end
 

@@ -14,7 +14,7 @@ class VideoInfo {
 }
 
 class StatUtility {
-    class func uploadStatisInfo(log dic: Dictionary<String, String>) {
+    class func uploadInfo(log dic: Dictionary<String, String>) {
         print("update log")
     }
 }
@@ -35,7 +35,10 @@ class ViewController: UIViewController {
             let videoInfo = self.videos[videoUrl]
             if let info = videoInfo {
                 if let videoTitle = info.videoTitle {
-                    StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
+                    StatUtility.uploadInfo(log: ["videoTitle": videoTitle])
+                }
+                if let videoCategory = info.videoCategory {
+                    StatUtility.uploadInfo(log: ["videoCategory": videoCategory])
                 }
             }
         }
@@ -49,8 +52,16 @@ class ViewController: UIViewController {
         let videoTitle: String? = g(a: info) { (info) -> (String?) in
             return info.videoTitle
         }
+        
+        let videoCategory: String? = g(a: info) { (info) -> (String?) in
+            return info.videoCategory
+        }
+        
         _ = g(a: videoTitle, f: { (videoTitle) -> () in
-            StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
+            StatUtility.uploadInfo(log: ["videoTitle": videoTitle])
+        })
+        _ = g(a: videoCategory, f: { (videoCategory) -> () in
+            StatUtility.uploadInfo(log: ["videoCategory": videoCategory])
         })
     }
     
@@ -59,10 +70,10 @@ class ViewController: UIViewController {
     func statVideoPlay2(videoUrl: String?){
         let info: VideoInfo? = g(a: videoUrl) { self.videos[$0] }
         let videoTitle: String? = g(a: info) { $0.videoTitle }
+        let videoCategory: String? = g(a: info) { $0.videoCategory }
         
-        _ = g(a: videoTitle, f: { (videoTitle) -> () in
-            StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
-        })
+        _ = g(a: videoTitle) { StatUtility.uploadInfo(log: ["videoTitle": $0])}
+        _ = g(a: videoCategory) { StatUtility.uploadInfo(log: ["videoCategory": $0])}
     }
     
     // 因为接受的第一个参数都是optional，将此方法扩展到optional中
@@ -70,32 +81,37 @@ class ViewController: UIViewController {
         _ = videoUrl
             .g { self.videos[$0] }
             .g { $0.videoTitle }
-            .g { videoTitle  in
-                StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
-        }
+            .g { StatUtility.uploadInfo(log: ["videoTitle": $0])}
+        
+        _ = videoUrl
+            .g { self.videos[$0] }
+            .g { $0.videoCategory }
+            .g { StatUtility.uploadInfo(log: ["videoCategory": $0])}
     }
     
-    // 使用optional的flatMap特性，来实现链式的调用，并且通过flatMap过滤掉空值
+    // 使用optional的flatMap特性，并且通过flatMap过滤掉空值
     func statVideoPlay4(videoUrl: String?){
         _ = videoUrl
-            .g1 { self.videos[$0] }
-            .g1 { $0.videoTitle }
-            .g1 { videoTitle in
-                StatUtility.uploadStatisInfo(log: ["videoTitle": videoTitle])
-        }
+            .flatMap { self.videos[$0] }
+            .flatMap { $0.videoTitle }
+            .flatMap { StatUtility.uploadInfo(log: ["videoTitle": $0]) }
+        
+        _ = videoUrl
+            .flatMap { self.videos[$0] }
+            .flatMap { $0.videoCategory }
+            .flatMap { StatUtility.uploadInfo(log: ["videoCategory": $0])}
     }
 }
 
 
 extension Optional {
-    // 接受一个可选参数a 和 一个接受非可选参数a并转成可选参数b的函数
+    
     func g<T>(f: (Wrapped)->(T?)) -> T? {
         guard let WrappedSelf = self else { return nil }
         return f(WrappedSelf)
     }
     
-    // 根据flatMap特性
-    func g1<b>(f: (Wrapped)-> b?) -> b? {
+    func g1<T>(f: (Wrapped)-> T?) -> T? {
         return self.flatMap({ f($0) })
     }
 }

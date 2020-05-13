@@ -18,7 +18,7 @@ class ViewController4: UIViewController {
         
         view.addSubview(adView)
         
-        _ = adViewModel.adDataObservable.subscribe { state in
+        adViewModel.adDataObservable.subscribe { state in
             state.adState(success: { adModel in
                 // 更新视图
                 self.adView.backgroundColor = UIColor.red
@@ -59,27 +59,8 @@ class MyView: UIView {
 }
 
 class ADViewModel: NSObject {
-    
-    enum ADNetWorkState {
-        case success(ADModel)
-        case falure(String)
-        case noknow(String)
-        
-        func adState(success: (ADModel)->(), falure: (String)->()) {
-            switch self {
-            case .success(let adModel):
-                success(adModel)
-            default:
-                falure("Network Error")
-            }
-        }
-    }
-    
+
     let adDataObservable = Observable(pure: ADNetWorkState.noknow("未知状态"))
-    
-    override init() {
-        super.init()
-    }
     
     func getAdData() {
         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 4) {
@@ -89,6 +70,23 @@ class ADViewModel: NSObject {
         }
     }
     
+    enum ADNetWorkState {
+         case success(ADModel)
+         case falure(String)
+         case noknow(String)
+         
+         func adState(success: (ADModel)->(), falure: (String)->()) {
+             switch self {
+             case .success(let adModel):
+                 success(adModel)
+             default:
+                 falure("Network Error")
+             }
+         }
+     }
+     
+     
+     
 }
 
 struct ADModel {
